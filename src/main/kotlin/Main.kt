@@ -1,6 +1,7 @@
 package org.example
 
 import org.example.dresseur.Entraineur
+import org.example.monstre.EspeceMonstre
 
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
@@ -8,8 +9,140 @@ import org.example.dresseur.Entraineur
 var joueur = Entraineur(1,"Sacha",100)
 var rival = Entraineur(2,"Regis",200)
 
-fun main() {
+var especeSpringleaf = EspeceMonstre(
+    id = 1,
+    nom = "Springleaf",
+    type = "Graine",
+    baseAttaque = 9,
+    baseDefense = 11,
+    baseVitesse = 10,
+    baseAttaqueSpe = 12,
+    baseDefenseSpe = 14,
+    basePv = 60,
+    modAttaque = 6.5,
+    modDefense = 9.0,
+    modVitesse = 8.0,
+    modAttaqueSpe = 7.0,
+    modDefenseSpe = 10.0,
+    modPv = 34.0,
+    description = "Petit monstre espiègle rond comme une graine, adore le soleil.",
+    particularites = "Sa feuille sur la tête indique son humeur.",
+    caractères = "Curieux, amical, timide"
+)
 
+var especeFlamkip = EspeceMonstre(
+    id = 4,
+    nom = "Flamkip",
+    type = "Animal",
+    baseAttaque = 12,
+    baseDefense = 8,
+    baseVitesse = 13,
+    baseAttaqueSpe = 16,
+    baseDefenseSpe = 7,
+    basePv = 50,
+    modAttaque = 10.0,
+    modDefense = 5.5,
+    modVitesse = 9.5,
+    modAttaqueSpe = 9.5,
+    modDefenseSpe = 6.5,
+    modPv = 22.0,
+    description = "Petit animal entouré de flammes, déteste le froid.",
+    particularites = "Sa flamme change d’intensité selon son énergie.",
+    caractères = "Impulsif, joueur, loyal"
+)
+
+var especeAquamy = EspeceMonstre(
+    id = 7,
+    nom = "Aquamy",
+    type = "Meteo",
+    baseAttaque = 10,
+    baseDefense =11,
+    baseVitesse = 9,
+    baseAttaqueSpe = 14,
+    baseDefenseSpe = 14,
+    basePv = 27,
+    modAttaque = 9.0,
+    modDefense = 10.0,
+    modVitesse = 7.5,
+    modAttaqueSpe = 12.0,
+    modDefenseSpe = 12.0,
+    modPv = 55.0,
+    description = "Créature vaporeuse semblable à un nuage, produit des gouttes pures.",
+    particularites = "Fait baisser la température en s’endormant.",
+    caractères = "Calme, rêveur, mystérieux"
+)
+
+var especeLaoumi = EspeceMonstre(
+    id = 8,
+    nom = "Laoumi",
+    type = "Animal",
+    baseAttaque = 11,
+    baseDefense = 10,
+    baseVitesse = 9,
+    baseAttaqueSpe = 8,
+    baseDefenseSpe = 11,
+    basePv = 23,
+    modAttaque = 11.0,
+    modDefense = 8.0,
+    modVitesse = 7.0,
+    modAttaqueSpe = 6.0,
+    modDefenseSpe = 11.5,
+    modPv = 58.0,
+    description = "Petit ourson au pelage soyeux, aime se tenir debout.",
+    particularites = "Son grognement est mignon mais il protège ses amis.",
+    caractères = "Affectueux, protecteur, gourmand"
+)
+
+var especeBugsyface = EspeceMonstre(
+    id = 10,
+    nom = "Bugsyface",
+    type = "Insecte",
+    baseAttaque = 10,
+    baseDefense = 13,
+    baseVitesse = 8,
+    baseAttaqueSpe = 7,
+    baseDefenseSpe = 13,
+    basePv = 21,
+    modAttaque = 7.0,
+    modDefense = 11.0,
+    modVitesse = 6.5,
+    modAttaqueSpe = 8.0,
+    modDefenseSpe = 11.5,
+    modPv = 45.0,
+    description = "Insecte à carapace luisante, se déplace par bonds et vibre des antennes.",
+    particularites = "Sa carapace devient plus dure après chaque mue.",
+    caractères = "Travailleur, sociable, infatigable"
+)
+
+var especeGalum = EspeceMonstre(
+    id = 13,
+    nom = "Galum",
+    type = "Minéral",
+    baseAttaque = 12,
+    baseDefense = 15,
+    baseVitesse = 6,
+    baseAttaqueSpe = 8,
+    baseDefenseSpe = 12,
+    basePv = 13,
+    modAttaque = 9.0,
+    modDefense = 13.0,
+    modVitesse = 4.0,
+    modAttaqueSpe = 6.5,
+    modDefenseSpe = 10.5,
+    modPv = 55.0,
+    description = "Golem ancien de pierre, yeux lumineux en garde.",
+    particularites = "Peut rester immobile des heures comme une statue.",
+    caractères = "Sérieux, stoïque, fiable"
+)
+
+fun main() {
+    joueur.afficheDetail()
+    rival.afficheDetail()
+    joueur.argents+=50
+    joueur.afficheDetail()
+    println(especeSpringleaf.afficheArt())
+    println(especeFlamkip.afficheArt())
+    println(especeAquamy.afficheArt())
 }
 
 
