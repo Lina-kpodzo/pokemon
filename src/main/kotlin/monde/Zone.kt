@@ -1,14 +1,14 @@
 package org.example.monde
 
-import org.example.monstre.EspaceMonstre
+import org.example.monstre.EspeceMonstre
 
 class Zone (
     var id : Int,
     var nom : String,
     var expZone : Int,
-    var especesMonstres : MutableList<EspaceMonstre>,
+    var especesMonstres : MutableList<EspeceMonstre>,
     var zoneSuivante : Zone?,
-    var Zoneprcedante : Zone?
+    var zonePrecedante : Zone?
 ){
 
 }

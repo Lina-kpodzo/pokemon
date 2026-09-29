@@ -6,9 +6,9 @@ class IndividuMonstre (
 
     var id : Int,
     var name : String,
-    var espece : EspaceMonstre,
+    var espece : EspeceMonstre,
     var entraineur: Entraineur,
 
-){
+    ){
 
 }
