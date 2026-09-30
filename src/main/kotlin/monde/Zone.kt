@@ -11,4 +11,6 @@ class Zone (
     var zonePrecedante : Zone?
 ){
 
+// TODO: faire la méthode genereMonstre()
+// TODO: faire la méthode rencontreMonstre()
 }

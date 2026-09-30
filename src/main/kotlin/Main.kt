@@ -1,6 +1,7 @@
 package org.example
 
 import org.example.dresseur.Entraineur
+import org.example.monde.Zone
 import org.example.monstre.EspeceMonstre
 
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
@@ -135,7 +136,20 @@ var especeGalum = EspeceMonstre(
     caractères = "Sérieux, stoïque, fiable"
 )
 
+val zone1 = Zone(
+    id = 1,
+    nom = "Route 1",
+    especesMonstres = mutableListOf(especeSpringleaf, especeFlamkip)
+)
+val zone2 = Zone(
+    id = 2,
+    nom = "Route 2",
+    especesMonstres = mutableListOf(especeFlamkip, especeAquamy)
+)
+
 fun main() {
+    zone1.zoneSuivante = zone2
+    zone2.zonePrecedante = zone1
     joueur.afficheDetail()
     rival.afficheDetail()
     joueur.argents+=50
